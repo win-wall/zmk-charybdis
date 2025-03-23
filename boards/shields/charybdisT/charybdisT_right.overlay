@@ -14,7 +14,7 @@
         ;
 };
 // https://github.com/badjeff/zmk-pmw3610-driver
-&spi1 {
+&spi2 {
   status = "okay";
 };
 
