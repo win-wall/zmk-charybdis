@@ -56,10 +56,11 @@
      };
     //left hand trackball
     split_inputs {
+        status = "okay";
         #address-cells = <1>;
         #size-cells = <0>;
 
-        trackball_peripheral_split: trackball_peripheral_split@0 {
+        trackball_peripheral_split_0: trackball_peripheral_split@0 {
             compatible = "zmk,input-split";
             reg = <0>;
         };
