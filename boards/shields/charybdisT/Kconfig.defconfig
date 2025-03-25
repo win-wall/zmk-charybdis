@@ -13,6 +13,9 @@ endif
 
 if SHIELD_CHARYBDIST_LEFT || SHIELD_CHARYBDIST_RIGHT
 
+config SPI
+    default y
+
 config ZMK_SPLIT
     default y
 if ZMK_DISPLAY
