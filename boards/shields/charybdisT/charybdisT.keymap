@@ -15,6 +15,7 @@
  #include <behaviors/mouse_keys.dtsi>
  #include <dt-bindings/zmk/keys.h>
  #include <dt-bindings/zmk/pointing.h>
+ #include <input/processors.dtsi>
 / {
     /* adjust cooldown waiting period for mouse key layer after activated */
     ib_toggle_layer: ib_toggle_layer {
