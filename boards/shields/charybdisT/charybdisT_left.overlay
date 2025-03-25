@@ -14,6 +14,7 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 &spi2 {
+    status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi2_default>;
     pinctrl-1 = <&spi2_sleep>;
