@@ -72,7 +72,7 @@
     trackball_peripheral_listener: trackball_peripheral_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&trackball_split>;
+        device = <&trackball_split_0>;
     };
     //right hand trackball
     trackball_central_listener: trackball_central_listener {
