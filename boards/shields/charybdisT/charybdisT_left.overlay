@@ -35,7 +35,7 @@
 };
 
 // Overrides for the input-split child node
-&trackball_split {
+&trackball_split_0 {
     status = "okay";
     device = <&trackball_peripheral>;
 };
