@@ -5,6 +5,8 @@
  */
 
  #include <dt-bindings/zmk/matrix_transform.h>
+ #include <input/processors.dtsi>
+ #include <dt-bindings/zmk/input_transform.h>
  &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
