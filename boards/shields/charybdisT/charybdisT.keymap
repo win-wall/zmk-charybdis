@@ -59,7 +59,7 @@
        };
 };
 
-//right hand trackball overrides
+//right hand trackball override
 &trackball_central_listener {
     input-processors =
         <&zip_temp_layer 1 500>;//activate layer 3 within 500ms of the trackball moving
