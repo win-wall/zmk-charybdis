@@ -6,6 +6,10 @@ manifest:
     url-base: https://github.com/badjeff
   - name: Cyboard-DigitalTailor
     url-base: https://github.com/Cyboard-DigitalTailor
+  - name: mctechnology17
+    url-base: https://github.com/mctechnology17
+  - name: kevinpastor
+    url-base: https://github.com/kevinpastor
   projects:
   - name: zmk
     remote: zmkfirmware
@@ -13,6 +17,9 @@ manifest:
     import: app/west.yml
   - name: zmk-pmw3610-driver
     remote: badjeff
+    revision: main
+  - name: zmk-oled-adapter
+    remote: mctechnology17
     revision: main
   self:
     path: config
