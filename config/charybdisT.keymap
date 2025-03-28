@@ -16,7 +16,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
-    bindings = <&to>, <&kp>;
+    bindings = <&mo>, <&kp>;
 };
 
 / {
