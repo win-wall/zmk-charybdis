@@ -61,3 +61,6 @@
     status = "okay";
     device = <&trackball_central>;
 };
+&led_strip {
+    chain-length = <20>;
+};
