@@ -68,7 +68,7 @@
 
  / {
      chosen {
-         zmk,underglow = &led_strip;
+         //zmk,underglow = &led_strip;
          zephyr,display = &oled;
          zmk,kscan = &kscan0;
          zmk,matrix-transform = &default_transform;
