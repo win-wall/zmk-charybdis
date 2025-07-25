@@ -30,6 +30,4 @@ manifest:
     revision: main
   - name: prospector-zmk-module                 # <--- and these
     remote: carrefinho                          # <---
-    revision: support_nicenano
-  self:
-    path: config
+    revision: nice_nano_spi2
