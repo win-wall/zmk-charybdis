@@ -1,6 +1,6 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
-if SHIELD_CHARYBDIST_RIGHT
+if SHIELD_CHARYBDIST_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "CharybdisT"
@@ -8,6 +8,11 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_USB
+	default y
+
+config ZMK_WPM
+	default y
 endif
 
 

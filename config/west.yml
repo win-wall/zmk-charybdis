@@ -26,5 +26,8 @@ manifest:
   - name: zmk-nice-oled
     remote: mctechnology17
     revision: main
+  - name: prospector-zmk-module                 # <--- and these
+      remote: carrefinho                          # <---
+      revision: support_nicenano
   self:
     path: config

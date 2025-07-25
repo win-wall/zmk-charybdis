@@ -41,6 +41,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
             // ---------------------------------------------------------------------------------------------------------------------------------
             // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
             // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
@@ -58,6 +59,7 @@
         };
 
         Nav {
+            display-name = "Nav";
             bindings = <
 &trans  &trans    &trans        &trans     &trans          &trans  &trans         &kp LC(C)      &kp N     &kp LC(V)       &trans        &trans
 &trans  &trans    &trans        &trans     &trans          &trans  &kp C_AC_REDO  &kp C_AC_COPY  &kp UP    &kp C_AC_PASTE  &kp C_AC_CUT  &kp C_AC_UNDO
@@ -68,6 +70,7 @@
         };
 
         mouse_layer {
+            display-name = "Mouse";
             // ---------------------------------------------------------------------------------------------------------------------------------
             // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
             // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
@@ -85,6 +88,7 @@
         };
 
         Media {
+            display-name = "Media";
             bindings = <
 &trans  &trans    &trans        &trans            &trans          &trans      &rgb_ug RGB_TOG    &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans        &trans
 &trans  &trans    &trans        &trans            &trans          &trans      &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans        &trans
@@ -95,6 +99,7 @@
         };
 
         NUM {
+            display-name = "Number";
             bindings = <
 &trans   &trans     &trans     &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &kp LBKT   &kp N7     &kp N8  &kp N9  &kp RBKT   &trans  &trans  &trans  &trans  &trans  &trans
@@ -105,6 +110,7 @@
         };
 
         SYM {
+            display-name = "Symbol";
             bindings = <
 &trans        &trans         &trans         &trans         &trans         &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)  &trans  &trans  &trans  &trans  &trans  &trans
@@ -115,6 +121,7 @@
         };
 
         FUNC {
+            display-name = "Function";
             bindings = <
 &trans  &trans   &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans           &trans  &trans  &trans  &trans  &trans  &trans
