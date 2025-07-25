@@ -12,8 +12,8 @@ manifest:
     url-base: https://github.com/kevinpastor
   - name: englmaxi
     url-base: https://github.com/englmaxi
-  - name: carrefinho                            # <--- add this
-    url-base: https://github.com/carrefinho     # <--- and this
+  - name: tokyo2006
+    url-base: https://github.com/tokyo2006
   projects:
   - name: zmk
     remote: zmkfirmware
@@ -29,5 +29,5 @@ manifest:
     remote: mctechnology17
     revision: main
   - name: prospector-zmk-module                 # <--- and these
-    remote: carrefinho                          # <---
-    revision: nice_nano_spi2
+    remote: tokyo2006                          # <---
+    revision: support_nicenano
