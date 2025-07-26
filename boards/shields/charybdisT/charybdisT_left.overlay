@@ -10,6 +10,13 @@
         , <&gpio1 13 GPIO_ACTIVE_HIGH>
         , <&gpio1 11 GPIO_ACTIVE_HIGH>
         ;
+    row-gpios
+        = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 04 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 01 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        ;
 };
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>

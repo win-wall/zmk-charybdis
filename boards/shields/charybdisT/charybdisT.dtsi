@@ -77,14 +77,6 @@
          compatible = "zmk,kscan-gpio-matrix";
          diode-direction = "col2row";
          wakeup-source;
-
-         row-gpios
-             = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-             , <&gpio1 04 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-             , <&gpio1 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-             , <&gpio1 01 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-             , <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-             ;
      };
  
      default_transform: keymap_transform0 {
@@ -109,11 +101,13 @@
             status = "okay";
             compatible = "zmk,input-split";
             reg = <0>;
+            input = <&trackball_split_0>;
         };
         trackball_split_1: trackball_split_1@1 {
             status = "okay";
             compatible = "zmk,input-split";
             reg = <1>;
+            input = <&trackball_split_1>;
         };
     };
 
