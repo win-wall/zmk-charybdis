@@ -30,9 +30,7 @@
 //   };
 // };
 
-&trackball_peripheral_listener {
-    status = "okay";
-};
+
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 &spi1 {
@@ -54,10 +52,4 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
     };
-};
-
-// Overrides for the input listener node
-&trackball_central_listener {
-    status = "okay";
-    device = <&trackball_central>;
 };
