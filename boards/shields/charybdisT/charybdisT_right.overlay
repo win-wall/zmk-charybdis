@@ -53,3 +53,7 @@
         y-input-code = <INPUT_REL_Y>;
     };
 };
+&trackball_split_1 {
+    status = "okay";
+    device = <&trackball_central>;
+};
