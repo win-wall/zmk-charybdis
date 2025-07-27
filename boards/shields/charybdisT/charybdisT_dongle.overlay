@@ -34,5 +34,8 @@
 &trackball_peripheral_listener {
     status = "okay";
 };
+&trackball_central_listener {
+    status = "okay";
+};
 
 // Overrides for the input listener node
