@@ -13,16 +13,15 @@
         status = "okay";
         #address-cells = <1>;
         #size-cells = <0>;
-
-        trackball_split_0: trackball_split_0@0 {
+        trackball_split_1: trackball_split_1@0 {
             compatible = "zmk,input-split";
             reg = <0>;
         };
     };
-
-    trackball_peripheral_listener: trackball_peripheral_listener {
+    //right hand trackball
+    trackball_central_listener: trackball_central_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&trackball_split_0>;
+        device = <&trackball_split_1>;
     };
  };
