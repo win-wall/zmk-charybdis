@@ -37,4 +37,4 @@
         status = "disabled";
         device = <&trackball_split_1>;
     };
- }
+ };
