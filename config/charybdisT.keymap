@@ -134,18 +134,3 @@
 };
 
 //right hand trackball override
-
-&trackball_central_listener {
-    input-processors = <&zip_temp_layer 2 500>;//activate layer 3 within 500ms of the trackball moving
-};
-
-//left hand trackball overrides
-
-&trackball_peripheral_listener {
-    input-processors =
-        <&zip_xy_scaler 1 20>,
-        //multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,
-        <&zip_xy_to_scroll_mapper>;
-
-    //make this trackball output scrolling events by default instead of cursor movement
-};
