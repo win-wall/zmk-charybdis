@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "charybdisT.dtsi"
-#include "charybdisT_pmw3610.dtsi"
+#include "split_input_common.dtsi"
 / {
     chosen {
         zmk,kscan = &mock_kscan;
