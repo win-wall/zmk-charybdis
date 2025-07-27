@@ -57,6 +57,7 @@
  / {
      chosen {
         zephyr,display = &oled;
+        zmk,matrix-transform = &default_transform;
      };
 };
  &pro_micro_i2c {
