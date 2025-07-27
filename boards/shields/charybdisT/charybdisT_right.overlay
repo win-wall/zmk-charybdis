@@ -1,6 +1,7 @@
 #include "charybdisT.dtsi"
 #include "charybdisT_pmw3610.dtsi"
 #include "common_keyboard.dtsi"
+#include "split_input_common.dtsi"
 &default_transform {
     col-offset = <6>;
 };
