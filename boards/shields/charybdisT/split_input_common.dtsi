@@ -18,10 +18,10 @@
             compatible = "zmk,input-split";
             reg = <0>;
         };
-        // trackball_split_1: trackball_split_1@0 {
-        //     compatible = "zmk,input-split";
-        //     reg = <0>;
-        // };
+        trackball_split_1: trackball_split_0@1 {
+            compatible = "zmk,input-split";
+            reg = <1>;
+        };
     };
 
     trackball_peripheral_listener: trackball_peripheral_listener {
@@ -29,10 +29,10 @@
         status = "disabled";
         device = <&trackball_split_0>;
     };
-    //right hand trackball
-    // trackball_central_listener: trackball_central_listener {
-    //     compatible = "zmk,input-listener";
-    //     status = "disabled";
-    //     device = <&trackball_split_1>;
-    // };
+    right hand trackball
+    trackball_central_listener: trackball_central_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_split_1>;
+    };
  };

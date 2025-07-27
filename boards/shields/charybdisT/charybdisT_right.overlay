@@ -53,7 +53,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
 
-    trackball_central: trackball_central@0 {
+    trackball_peripheral: trackball_peripheral@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
@@ -65,7 +65,7 @@
         y-input-code = <INPUT_REL_Y>;
     };
 };
-&trackball_split_1 {
+&trackball_split_0 {
     status = "okay";
-    device = <&trackball_central>;
+    device = <&trackball_peripheral>;
 };
