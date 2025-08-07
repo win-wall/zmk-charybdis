@@ -60,6 +60,5 @@
      chosen {
         zmk,underglow = &led_strip;
         zmk,matrix-transform = &default_transform;
-        zmk,physical-layout = &physical_layout0;
      };
 };

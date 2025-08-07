@@ -11,6 +11,7 @@
      chosen {
          //zmk,underglow = &led_strip;
          zmk,kscan = &kscan0;
+         zmk,physical-layout = &physical_layout0;
      };
      kscan0: kscan0 {
          diode-direction = "col2row";
