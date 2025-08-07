@@ -5,7 +5,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;  // New item added
+        zmk,physical-layout = &charybdis_physical_layout;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -27,11 +27,6 @@
                             RC(5,3) RC(5,3) RC(5,4) RC(5,5) RC(5,6) RC(5,7) RC(5,8) RC(5,9)
         >;
     };
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-    };
 };
 &trackball_peripheral_listener {
     status = "okay";
@@ -41,3 +36,6 @@
 };
 
 // Overrides for the input listener node
+&standard_physical_layout{
+    transform = <&default_transform>;
+}
