@@ -1,3 +1,5 @@
+ 
+ #include <charybdisT-layout.dtsi>
  &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
