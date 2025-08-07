@@ -38,4 +38,4 @@
 // Overrides for the input listener node
 &charybdis_physical_layout{
     transform = <&default_transform>;
-}
+};
