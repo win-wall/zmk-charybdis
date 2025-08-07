@@ -25,6 +25,11 @@
         , <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
+ / {
+     chosen {
+        zephyr,display = &oled2;
+     };
+};
 // https://github.com/badjeff/zmk-pmw3610-driver
 // &spi1 {
 //   status = "okay";
@@ -68,4 +73,23 @@
 &trackball_split_0 {
     status = "okay";
     device = <&trackball_peripheral>;
+};
+//add oled
+&pro_micro_i2c {
+    status = "okay";
+
+    oled2: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        prechargep = <0x22>;
+    };
 };
