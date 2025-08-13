@@ -13,6 +13,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -37,25 +38,114 @@
         time-to-live-ms = <2000>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        test {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <13 25>;
+            layers = <0>;
+        };
+
+        test2 {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <26 14>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <15 27>;
+        };
+
+        Dollar_sign {
+            bindings = <&kp DOLLAR>;
+            key-positions = <16 28>;
+        };
+
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <17 29>;
+        };
+
+        carret {
+            bindings = <&kp CARET>;
+            key-positions = <25 37>;
+        };
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <38 26>;
+        };
+
+        star {
+            bindings = <&kp ASTERISK>;
+            key-positions = <39 27>;
+        };
+
+        l_parent {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <40 28>;
+        };
+
+        r_parent {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <29 41>;
+        };
+
+        low_negative {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <19 31>;
+        };
+
+        upper_equal {
+            bindings = <&kp PLUS>;
+            key-positions = <20 32>;
+        };
+
+        why_i {
+            bindings = <&kp SLASH>;
+            key-positions = <22 34>;
+        };
+
+        new_hash {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <31 43>;
+        };
+
+        end_idk {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <44 32>;
+        };
+
+        idk {
+            bindings = <&kp NON_US_BACKSLASH>;
+            key-positions = <45 33>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp A>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Base";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
-            // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
-            // |  CTRL  |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |   '    |
-            // |  SHIFT |   Z    |   X    |   C    |   V    |   B    |  LBKT  |                    |  RBKT  |   N    |   M    |   ,    |   .    |   /    |  RET   |
-            // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
-
+        Base {
             bindings = <
-&kp GRAVE       &kp N1        &kp N2             &kp N3         &kp N4         &kp N5        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q         &kp W              &kp E          &kp R          &kp T         &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A         &kp S              &kp D          &kp F          &kp G         &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z         &kp X              &kp C          &kp V          &kp B         &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-&my_mt 3 SPACE  &my_mt 1 ESC  &my_mt 2 LEFT_GUI  &my_mt 5 RALT  &my_mt 4 BSPC  &my_mt 6 RET
+&kp FSLH      &kp N1        &kp N2     &kp N3          &kp N4    &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp FSLH
+&kp FSLH      &kp Q         &kp W      &kp F           &kp P     &kp B      &kp J      &kp L      &kp U      &kp Y     &kp SQT   &kp FSLH
+&kp FSLH      &kp A         &kp R      &kp S           &kp T     &kp G      &kp M      &kp N      &kp E      &kp I     &kp O     &kp FSLH
+&kp FSLH      &kp Z         &kp X      &kp C           &kp D     &kp V      &kp K      &kp H      &kp COMMA  &kp DOT   &kp SEMI  &kp FSLH
+&kp LS(LPAR)  &kp LS(RPAR)  &kp UP     &kp DOWN        &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
+&kp LSHFT     &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  &kp TAB   &kp ESC    &kp LSHFT  &kp LSHFT
             >;
+
+            label = "Base";
         };
 
         Nav {
@@ -71,6 +161,7 @@
 
         mouse_layer {
             display-name = "Mouse";
+
             // ---------------------------------------------------------------------------------------------------------------------------------
             // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
             // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
@@ -129,6 +220,37 @@
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans   &trans  &trans  &trans  &trans
             >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans      &trans      &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_MUTE  &trans
+&trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT        &kp DOWN           &kp UP           &kp DOWN    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans        &trans   &trans   &trans  &trans  &trans   &trans        &trans        &trans        &trans        &trans        &trans
+&out OUT_TOG  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&bootloader   &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans        &trans        &trans        &trans        &trans        &bootloader
+&trans        &kp F11  &kp F12  &trans  &trans  &trans   &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans   &trans   &trans  &trans  &trans   &trans        &trans        &trans        &trans
+&trans        &trans   &trans   &trans  &trans  &trans   &trans        &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        test {
+            if-layers = <0>;
+            then-layer = <0>;
         };
     };
 };
