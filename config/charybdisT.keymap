@@ -140,8 +140,8 @@
 &kp FSLH      &kp Q           &kp W           &kp F           &kp P             &kp B      &kp J      &kp L             &kp U        &kp Y           &kp SQT         &kp FSLH
 &kp FSLH      &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S     &mt LEFT_SHIFT T  &kp G      &kp M      &mt LEFT_SHIFT N  &mt LCTRL E  &mt LEFT_ALT I  &mt LEFT_GUI O  &kp FSLH
 &kp FSLH      &kp Z           &kp X           &kp C           &kp D             &kp V      &kp K      &kp H             &kp COMMA    &kp DOT         &kp SEMI        &kp FSLH
-&kp LS(LPAR)  &kp LS(RPAR)    &kp UP          &kp DOWN        &kp BSPC          &kp SPACE  &kp LEFT   &kp RIGHT         &kp LBKT     &kp RBKT
-&kp LSHFT     &kp LSHFT       &kp LSHFT       &kp LEFT_SHIFT  &kp TAB           &kp ESC    &kp LSHFT  &kp LSHFT
+&kp LS(LPAR)  &kp LS(RPAR)    &kp UP          &kp DOWN                          &kp BSPC   &kp SPACE                    &kp LEFT     &kp RIGHT       &kp LBKT        &kp RBKT
+                              &kp LSHFT       &kp LSHFT       &kp LSHFT       &kp LEFT_SHIFT  &kp TAB           &kp ESC    &kp LSHFT  &kp LSHFT
             >;
 
             label = "Base";
