@@ -95,13 +95,13 @@
             ;
     };
 };
-// &trackball_peripheral_listener {
-//     status = "okay";
-//     input-processors = <&zip_temp_layer 3 2000>, <&zip_xy_to_scroll_mapper>;
-// };
-// &trackball_central_listener {
-//     status = "okay";
-//     input-processors = <&zip_temp_layer 3 2000>;
-// };
+&trackball_peripheral_listener {
+    status = "okay";
+    input-processors = <&zip_temp_layer 3 2000>;
+};
+&trackball_central_listener {
+    status = "okay";
+    input-processors = <&zip_temp_layer 3 2000>, <&zip_xy_to_scroll_mapper>;
+};
 
 // Overrides for the input listener node
