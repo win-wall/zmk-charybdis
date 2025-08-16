@@ -75,6 +75,7 @@
 &trackball_split_0 {
     status = "okay";
     device = <&trackball_peripheral>;
+    input-processors = <&zip_temp_layer 3 2000>;
 };
 //add oled
 &pro_micro_i2c {
