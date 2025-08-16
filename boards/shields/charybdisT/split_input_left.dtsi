@@ -9,13 +9,13 @@
 #define SYM 5
 #define FUNC 6
  / {
-    split_inputs {
+    split_inputs_1 {
         status = "okay";
         #address-cells = <1>;
         #size-cells = <0>;
-        trackball_split_1: trackball_split_1@0 {
+        trackball_split_1: trackball_split_1@1 {
             compatible = "zmk,input-split";
-            reg = <0>;
+            reg = <1>;
         };
     };
     //right hand trackball
