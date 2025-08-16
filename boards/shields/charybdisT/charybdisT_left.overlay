@@ -2,6 +2,7 @@
 #include "charybdisT_pmw3610.dtsi"
 #include "common_keyboard.dtsi"
 #include "split_input_left.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     col-gpios

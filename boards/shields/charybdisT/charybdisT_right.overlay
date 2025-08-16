@@ -2,6 +2,7 @@
 #include "charybdisT_pmw3610.dtsi"
 #include "common_keyboard.dtsi"
 #include "split_input_common.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 &default_transform {
     col-offset = <6>;
 };
