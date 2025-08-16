@@ -52,10 +52,17 @@
 };
 
 // Overrides for the input-split child node
-&trackball_split_1 {
-    status = "okay";
+// &trackball_split_1 {
+//     status = "okay";
+//     device = <&trackball_peripheral_1>;
+// };
+// test
+/ {
+  trackball_central_listener {
+    compatible = "zmk,input-listener";
     device = <&trackball_peripheral_1>;
     input-processors = <&zip_temp_layer 3 2000>, <&zip_xy_to_scroll_mapper>;
+  };
 };
 //add oled
 &pro_micro_i2c {

@@ -1,7 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "charybdisT.dtsi"
-#include "split_input_common.dtsi"
-#include "split_input_left.dtsi"
+//#include "split_input_common.dtsi"
+//#include "split_input_left.dtsi"
 #include <input/processors.dtsi>
 / {
     chosen {
@@ -95,11 +95,13 @@
             ;
     };
 };
-&trackball_peripheral_listener {
-    status = "okay";
-};
-&trackball_central_listener {
-    status = "okay";
-};
+// &trackball_peripheral_listener {
+//     status = "okay";
+//     input-processors = <&zip_temp_layer 3 2000>, <&zip_xy_to_scroll_mapper>;
+// };
+// &trackball_central_listener {
+//     status = "okay";
+//     input-processors = <&zip_temp_layer 3 2000>;
+// };
 
 // Overrides for the input listener node

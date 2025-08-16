@@ -73,10 +73,16 @@
         force-awake;
     };
 };
-&trackball_split_0 {
-    status = "okay";
-    device = <&trackball_peripheral>;
+// &trackball_split_0 {
+//     status = "okay";
+//     device = <&trackball_peripheral>;
+// };
+/ {
+  trackball_peripheral_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball_peripheral_1>;
     input-processors = <&zip_temp_layer 3 2000>;
+  };
 };
 //add oled
 &pro_micro_i2c {
