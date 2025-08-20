@@ -156,6 +156,8 @@
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP    &kp DOWN   &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
 &mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  &kp RET   &kp SEMI   &kp LCTRL  &kp SQT
             >;
+
+            label = "QWERTY";
         };
 
         L2 {
