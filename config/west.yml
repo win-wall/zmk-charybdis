@@ -14,8 +14,8 @@ manifest:
     url-base: https://github.com/englmaxi
   - name: carrefinho                            # <--- add this
     url-base: https://github.com/carrefinho
-  - name: urob
-    url-base: https://github.com/urob
+  - name: win-wall
+    url-base: https://github.com/win-wall
   projects:
   - name: zmk
     remote: zmkfirmware
@@ -34,5 +34,5 @@ manifest:
     remote: carrefinho                          # <---
     revision: main
   - name: zmk-helpers
-    remote: urob
+    remote: win-wall
     revision: main
