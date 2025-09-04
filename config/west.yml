@@ -17,7 +17,7 @@ manifest:
   - name: win-wall
     url-base: https://github.com/win-wall
   - name: urob
-  url-base: https://github.com/urob
+    url-base: https://github.com/urob
   projects:
   - name: zmk
     remote: zmkfirmware
