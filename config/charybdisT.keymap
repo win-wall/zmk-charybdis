@@ -24,44 +24,31 @@
 #define THUMBS LH0 LH1 LH2 LH3 RH0 RH1 RH2 RH3                                            // thumbs
 #define NUM 2
 #define QUICK_TAP_MS 175
-ZMK_HOLD_TAP(hml,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
 
-ZMK_HOLD_TAP(hmr,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-/* Magic-shift & auto-layers */
 
-// Tap: repeat after alpha, else sticky-shift |
-// Shift + tap/ double-tap: caps-word | Hold: shift.
-#define MAGIC_SHIFT &magic_shift LSHFT 0
-ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>;
-             flavor = "balanced"; tapping-term-ms = <200>;
-             quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_MOD_MORPH(magic_shift_tap, bindings = <&shift_repeat>, <&caps_word>;
-              mods = <(MOD_LSFT)>;)
-ZMK_ADAPTIVE_KEY(
-    shift_repeat, bindings = <&sk LSHFT>;
-    repeat {
-      trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
-      bindings = <&key_repeat>;
-      max-prior-idle-ms = <1200>;
-      strict-modifiers;
-    };)
-&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
-  /delete-property/ ignore-modifiers;
+&sk {
+  release-after-ms = <900>;
+  quick-release;
 };
+
+&sl { // Allow sticky mods to chord across sticky layers.
+  ignore-modifiers;
+};
+
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
+  ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
+               tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
+               require-prior-idle-ms = <150>; hold-trigger-on-release;         \
+               hold-trigger-key-positions = <TRIGGER_POS>;)
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+/* Magic-shift & auto-layers */
 #define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
@@ -193,7 +180,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &to 2           &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O     &to 2
 &to 1           &kp Z         &kp X      &kp C           &kp D     &kp V      &kp K      &kp H      &kp COMMA  &kp DOT   &kp SEMI  &to 1
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP     &kp DOWN        &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&kp LSHFT       &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  SMART_NUM   MAGIC_SHIFT    &kp LSHFT  &kp LSHFT
+&kp LSHFT       &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  SMART_NUM   &kp LSHFT    &kp LSHFT  &kp LSHFT
             >;
 
             label = "Base";
@@ -206,7 +193,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &to 3           &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMICOLON  &to 3
 &to 2           &kp Z         &kp X     &kp C      &kp V     &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH       &to 2
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP    &kp DOWN   &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  SMART_NUM   MAGIC_SHIFT   &kp LCTRL  &kp SQT
+&mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  SMART_NUM   &kp LSHFT   &kp LCTRL  &kp SQT
             >;
 
             label = "QWERTY";
