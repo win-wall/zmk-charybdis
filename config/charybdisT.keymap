@@ -171,7 +171,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &to 2           &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O     &to 2
 &to 1           &kp Z         &kp X      &kp C           &kp D     &kp V      &kp K      &kp H      &kp COMMA  &kp DOT   &kp SEMI  &to 1
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP     &kp DOWN        &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&kp LSHFT       &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  &kp TAB   &kp ESC    &kp LSHFT  &kp LSHFT
+&kp LSHFT       &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  SMART_NUM   &kp ESC    &kp LSHFT  &kp LSHFT
             >;
 
             label = "Base";
@@ -184,7 +184,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &to 3           &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMICOLON  &to 3
 &to 2           &kp Z         &kp X     &kp C      &kp V     &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH       &to 2
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP    &kp DOWN   &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  &kp RET   &kp SEMI   &kp LCTRL  &kp SQT
+&mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  SMART_NUM   &kp SEMI   &kp LCTRL  &kp SQT
             >;
 
             label = "QWERTY";
