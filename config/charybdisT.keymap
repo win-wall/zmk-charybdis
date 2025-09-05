@@ -9,17 +9,16 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/behaviors.h>
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/charybdisT.h"
+#include "zmk-helpers/unicode-chars/german.dtsi"
+#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/charybdisT.h"
-#include "zmk-helpers/unicode-chars/german.dtsi"
-#include <behaviors/num_word.dtsi> 
-
 
 / {
     /* adjust cooldown waiting period for mouse key layer after activated */
@@ -141,12 +140,12 @@
 
         Base {
             bindings = <
-&studio_unlock  &kp N1        &kp N2     &kp N3          &kp N4    &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &studio_unlock
-&to 3           &kp Q         &kp W      &kp F           &kp P     &kp B      &kp J      &kp L      &kp U      &kp Y     &kp SQT   &to 3
-&to 2           &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O     &to 2
-&to 1           &kp Z         &kp X      &kp C           &kp D     &kp V      &kp K      &kp H      &kp COMMA  &kp DOT   &kp SEMI  &to 1
-&kp LS(LPAR)    &kp LS(RPAR)  &kp UP     &kp DOWN        &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&kp LSHFT       &kp LSHFT     &kp LSHFT  &kp LEFT_SHIFT  &kp LSHFT   &kp LSHFT    &kp LSHFT  &kp LSHFT
+&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6    &kp N7        &kp N8        &kp N9       &kp N0       &studio_unlock
+&to 3           &kp Q         &kp W        &kp F         &kp P         &kp B      &kp J     &kp L         &kp U         &kp Y        &kp SQT      &to 3
+&to 2           &hml LGUI A   &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G      &kp M     &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I  &hmr LGUI O  &to 2
+&to 1           &kp Z         &kp X        &kp C         &kp D         &kp V      &kp K     &kp H         &kp COMMA     &kp DOT      &kp SEMI     &to 1
+&kp LS(LPAR)    &kp LS(RPAR)  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT  &kp RIGHT     &kp LBKT      &kp RBKT
+&kp LCTRL       &tog 3        &tog 2       &kp ENTER     &kp LSHFT     &kp RCTRL  &tog 2    &tog 3
             >;
 
             label = "Base";
@@ -154,37 +153,35 @@
 
         QWERTY {
             bindings = <
-&studio_unlock  &kp N1        &kp N2    &kp N3     &kp N4    &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &studio_unlock
-&to 0           &kp Q         &kp W     &kp E      &kp R     &kp T      &kp Y      &kp U      &kp I      &kp O     &kp P          &to 0
-&to 3           &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMICOLON  &to 3
-&to 2           &kp Z         &kp X     &kp C      &kp V     &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH       &to 2
-&kp LS(LPAR)    &kp LS(RPAR)  &kp UP    &kp DOWN   &kp BSPC  &kp SPACE  &kp LEFT   &kp RIGHT  &kp LBKT   &kp RBKT
-&mkp MB4        &mkp MB5      &kp LGUI  &kp LSHFT  &kp LSHFT   &kp LSHFT   &kp LCTRL  &kp SQT
+&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6     &kp N7        &kp N8        &kp N9       &kp N0               &studio_unlock
+&to 0           &kp Q         &kp W        &kp E         &kp R         &kp T      &kp Y      &kp U         &kp I         &kp O        &kp P                &to 0
+&to 3           &hml LGUI A   &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G      &kp H      &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LGUI SEMICOLON  &to 3
+&to 0           &kp Z         &kp X        &kp C         &kp V         &kp B      &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH             &to 0
+&kp LS(LPAR)    &kp LS(RPAR)  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT   &kp RIGHT     &kp LBKT      &kp RBKT
+&mkp MB4        &mkp MB5      &kp LGUI     &kp LSHFT     &kp LSHFT     &kp LSHFT  &kp LCTRL  &kp SQT
             >;
 
             label = "QWERTY";
         };
 
-        L2 {
+        layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans      &trans      &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_MUTE  &trans
-&trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT        &kp DOWN           &kp UP           &kp DOWN    &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans      &trans      &trans
-&trans  &trans  &trans  &trans  &to 1   &to 1   &trans          &trans             &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &tog 2  &tog 2  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            label = "Number, Media";
         };
 
         func {
             bindings = <
-&trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans           &trans           &trans           &trans        &trans
-&out OUT_TOG     &kp F1           &kp F2           &kp F3           &kp F4  &kp F5   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4  &trans
-&bootloader      &kp F6           &kp F7           &kp F8           &kp F9  &kp F10  &rgb_ug RGB_TOG  &trans           &trans           &trans           &trans        &bootloader
-&trans           &kp F11          &kp F12          &trans           &trans  &trans   &trans           &trans           &trans           &trans           &trans        &trans
-&rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &to 1   &to 1    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF
+&trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans             &trans           &trans           &trans            &trans
+&out OUT_TOG     &kp F1           &kp F7           &kp F8           &kp F9  &kp F5   &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &trans
+&bootloader      &kp F6           &kp F4           &kp F5           &kp F6  &kp F10  &rgb_ug RGB_TOG  &kp K_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &kp K_PLAY_PAUSE  &bootloader
+&trans           &kp F11          &kp F1           &kp F2           &kp F3  &trans   &trans           &trans             &trans           &trans           &trans            &trans
+&rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &to 3   &tog 3   &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF
 &trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans
             >;
 
@@ -193,12 +190,12 @@
 
         mouse {
             bindings = <
-&trans    &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &kp LC(A)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans     &trans     &trans     &mkp LCLK  &trans  &trans  &trans  &trans  &trans
-&mkp MB4  &mkp MB5   &mkp MCLK  &mkp RCLK  &trans     &trans  &trans  &trans
+&trans    &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans     &trans     &mkp LCLK  &trans  &trans  &trans  &trans  &trans
+&mkp MB4  &mkp MB5  &mkp MCLK  &mkp RCLK  &trans     &trans  &trans  &trans
             >;
 
             label = "MOUSE";
