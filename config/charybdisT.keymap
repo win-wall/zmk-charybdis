@@ -11,7 +11,6 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/charybdisT.h"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 #include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
