@@ -139,8 +139,6 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
     };
 
     combos {
-        compatible = "zmk,combos";
-
         test {
             bindings = <&kp EXCLAMATION>;
             key-positions = <13 25>;
@@ -193,12 +191,12 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         low_negative {
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp MINUS>;
             key-positions = <19 31>;
         };
 
         upper_equal {
-            bindings = <&kp PLUS>;
+            bindings = <&kp EQUAL>;
             key-positions = <20 32>;
         };
 
@@ -218,8 +216,48 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         idk {
-            bindings = <&kp NON_US_BACKSLASH>;
-            key-positions = <45 33>;
+            bindings = <&kp SLASH>;
+            key-positions = <34 46>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <13 14>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <37 38>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <38 38 39>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <25 26>;
+        };
+
+        negative {
+            bindings = <&kp GRAVE>;
+            key-positions = <31 32>;
+        };
+
+        insert-org {
+            bindings = <&insertOrg>;
+            key-positions = <14 15>;
+        };
+
+        insert-org-find {
+            bindings = <&insertOrg>;
+            key-positions = <16 17>;
+        };
+
+        insert-link {
+            bindings = <&insertLink>;
+            key-positions = <26 27>;
         };
     };
 
@@ -229,6 +267,27 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
             #binding-cells = <0>;
             bindings = <&kp Q &kp A>;
             label = "NEW_MACRO";
+        };
+
+        insertOrg: insertOrg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp N &kp R &kp I>;
+            label = "INSERTORG";
+        };
+
+        insertOrgFind: insertOrgFind {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp N &kp R &kp F>;
+            label = "INSERTORGFIND";
+        };
+
+        insertLink: insertLink {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp I &kp L>;
+            label = "INSERTLINK";
         };
     };
 
@@ -279,7 +338,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &out OUT_TOG     &kp F1           &kp F7           &kp F8           &kp F9  &kp F5   &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &trans
 &bootloader      &kp F6           &kp F4           &kp F5           &kp F6  &kp F10  &rgb_ug RGB_TOG  &kp K_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &kp K_PLAY_PAUSE  &bootloader
 &trans           &kp F11          &kp F1           &kp F2           &kp F3  &trans   &trans           &trans             &trans           &trans           &trans            &trans
-&rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &to 3   &tog 3   &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF
+&rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &tog 3   &tog 3   &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF
 &trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans
             >;
 
