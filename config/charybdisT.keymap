@@ -301,7 +301,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &to 2           &hml LGUI A   &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G      &kp M     &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I  &hmr LGUI O  &to 2
 &to 1           &kp Z         &kp X        &kp C         &kp D         &kp V      &kp K     &kp H         &kp COMMA     &kp DOT      &kp SEMI     &to 1
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT  &kp RIGHT     &kp LBKT      &kp RBKT
-&kp LCTRL       &tog 3        &tog 2       &kp ENTER     &kp LSHFT     &kp RCTRL  &tog 2    &tog 3
+&kp LCTRL       &tog 3        &tog 2       &kp ENTER     SMART_NUM     &mkp MB4  &tog 2    &tog 3
             >;
 
             label = "Base";
