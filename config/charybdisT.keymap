@@ -139,6 +139,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
     };
 
     combos {
+        compatible = "zmk,combos";
         test {
             bindings = <&kp EXCLAMATION>;
             key-positions = <13 25>;
