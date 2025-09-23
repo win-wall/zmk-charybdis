@@ -143,7 +143,6 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         test {
             bindings = <&kp EXCLAMATION>;
             key-positions = <13 25>;
-            layers = <0>;
         };
 
         test2 {
@@ -207,17 +206,17 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         new_hash {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp GRAVE>;
             key-positions = <31 43>;
         };
 
         end_idk {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp INSERT>;
             key-positions = <44 32>;
         };
 
         idk {
-            bindings = <&kp SLASH>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <34 46>;
         };
 
@@ -228,12 +227,12 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
         copy {
             bindings = <&kp LC(C)>;
-            key-positions = <37 38>;
+            key-positions = <38 39>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <38 38 39>;
+            key-positions = <39 40>;
         };
 
         tab {
@@ -252,7 +251,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         insert-org-find {
-            bindings = <&insertOrg>;
+            bindings = <&insertOrgFind>;
             key-positions = <16 17>;
         };
 
@@ -296,13 +295,21 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         compatible = "zmk,keymap";
 
         Base {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+             // | UNLOCK |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    | UNLOCK |
+             // |   TO3  |   Q    |   W    |   F    |   P    |   B    |                                      |   J    |   L    |   U    |   Y    |   '    |  TO3   |
+             // |   TO2  |  GUI+A | ALT+R  | SFT+S  | CTL+T  |   G    |                                      |   M    | CTL+N  | SFT+E  | ALT+I  | GUI+O  |  TO2   |
+             // |   TO1  |   Z    |   X    |   C    |   D    |   V    |                                      |   K    |   H    |   ,    |   .    |   ;    |  TO1   |
+             // |   (    |   )    |  UP    | DOWN   |        |         | BSPC   |                    |SPACE  |  LEFT  |                    | RIGHT |  [   |   ]    |  
+             // |  CTRL  |  TOG3  |  TOG2  | ENTER  |  NUM   | MB4    |  TOG2  |                    | TOG3  |        |        |        |        |        |        |
+
             bindings = <
-&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6    &kp N7        &kp N8        &kp N9       &kp N0       &studio_unlock
-&to 3           &kp Q         &kp W        &kp F         &kp P         &kp B      &kp J     &kp L         &kp U         &kp Y        &kp SQT      &to 3
-&to 2           &hml LGUI A   &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G      &kp M     &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I  &hmr LGUI O  &to 2
-&to 1           &kp Z         &kp X        &kp C         &kp D         &kp V      &kp K     &kp H         &kp COMMA     &kp DOT      &kp SEMI     &to 1
+&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6    &kp N7        &kp N8        &kp N9       &kp N0       &OUT_TOG
+&to 3           &kp Q         &kp W        &kp F         &kp P         &kp B      &kp J     &kp L         &kp U         &kp Y        &kp SQT      &insertLink
+&to 2           &hml LGUI A   &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G      &kp M     &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I  &hmr LGUI O  &insertOrgFind
+&to 1           &kp Z         &kp X        &kp C         &kp D         &kp V      &kp K     &kp H         &kp COMMA     &kp DOT      &kp SEMI     &insertOrg
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT  &kp RIGHT     &kp LBKT      &kp RBKT
-&kp LCTRL       &tog 3        &tog 2       &kp ENTER     SMART_NUM     &mkp MB4  &tog 2    &tog 3
+&mkp MB4        &kp ESC       &tog 3      &kp ENTER     SMART_NUM      &tog 3     &kp ESC   &mkp MB5
             >;
 
             label = "Base";
@@ -310,12 +317,12 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
         QWERTY {
             bindings = <
-&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6     &kp N7        &kp N8        &kp N9       &kp N0               &studio_unlock
-&to 0           &kp Q         &kp W        &kp E         &kp R         &kp T      &kp Y      &kp U         &kp I         &kp O        &kp P                &to 0
-&to 3           &hml LGUI A   &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G      &kp H      &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LGUI SEMICOLON  &to 3
-&to 0           &kp Z         &kp X        &kp C         &kp V         &kp B      &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH             &to 0
+&studio_unlock  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6     &kp N7        &kp N8        &kp N9       &kp N0               &OUT_TOG
+&to 3           &kp Q         &kp W        &kp E         &kp R         &kp T      &kp Y      &kp U         &kp I         &kp O        &kp P                &insertLink
+&to 2           &hml LGUI A   &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G      &kp H      &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LGUI SEMICOLON  &insertOrgFind
+&to 0           &kp Z         &kp X        &kp C         &kp V         &kp B      &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH             &insertOrg
 &kp LS(LPAR)    &kp LS(RPAR)  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT   &kp RIGHT     &kp LBKT      &kp RBKT
-&mkp MB4        &mkp MB5      &kp LGUI     &kp LSHFT     &kp LSHFT     &kp LSHFT  &kp LCTRL  &kp SQT
+&mkp MB4        &kp ESC       &tog 3      &kp ENTER     SMART_NUM      &tog 3     &kp ESC   &mkp MB5
             >;
 
             label = "QWERTY";
@@ -327,7 +334,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &tog 2  &tog 2  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &tog 2  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
             label = "NUMBER";
@@ -336,9 +343,9 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         func {
             bindings = <
 &trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans             &trans           &trans           &trans            &trans
-&out OUT_TOG     &kp F1           &kp F7           &kp F8           &kp F9  &kp F5   &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &trans
-&bootloader      &kp F6           &kp F4           &kp F5           &kp F6  &kp F10  &rgb_ug RGB_TOG  &kp K_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &kp K_PLAY_PAUSE  &bootloader
-&trans           &kp F11          &kp F1           &kp F2           &kp F3  &trans   &trans           &trans             &trans           &trans           &trans            &trans
+&out OUT_TOG     &trans           &kp F7           &kp F8           &kp F9  &kp F10   &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &trans
+&bootloader      &trans           &kp F4           &kp F5           &kp F6  &kp F11  &rgb_ug RGB_TOG  &kp K_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &kp K_PLAY_PAUSE  &bootloader
+&trans           &trans          &kp F1           &kp F2           &kp F3  &kp F12   &trans           &trans             &trans           &trans           &trans            &trans
 &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &tog 3   &tog 3   &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF
 &trans           &trans           &trans           &trans           &trans  &trans   &trans           &trans
             >;
