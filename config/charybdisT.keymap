@@ -221,7 +221,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         esc {
-            bindings = <&kp ENTER>;
+            bindings = <&kp ESC>;
             key-positions = <13 14>;
         };
 
@@ -241,8 +241,12 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         negative {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp ENTER>;
             key-positions = <31 32>;
+        };
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <32 33>;
         };
 
         insert-org {
