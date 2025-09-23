@@ -244,7 +244,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
             bindings = <&kp ENTER>;
             key-positions = <31 32>;
         };
-        esc {
+        esc-another {
             bindings = <&kp ESC>;
             key-positions = <32 33>;
         };
