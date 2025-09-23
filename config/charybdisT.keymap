@@ -202,7 +202,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
         why_i {
             bindings = <&kp SLASH>;
-            key-positions = <22 34>;
+            key-positions = <21 33>;
         };
 
         new_hash {
@@ -217,11 +217,11 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
         idk {
             bindings = <&kp BACKSLASH>;
-            key-positions = <34 46>;
+            key-positions = <33 45>;
         };
 
         esc {
-            bindings = <&kp ESC>;
+            bindings = <&kp ENTER>;
             key-positions = <13 14>;
         };
 
