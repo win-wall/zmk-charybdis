@@ -105,7 +105,7 @@
 
         why_i {
             bindings = <&kp SLASH>;
-            key-positions = <22 34>;
+            key-positions = <21 33>;
         };
 
         new_hash {
@@ -120,12 +120,7 @@
 
         idk {
             bindings = <&kp SLASH>;
-            key-positions = <34 46>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <13 14>;
+            key-positions = <33 45>;
         };
 
         copy {
@@ -138,29 +133,59 @@
             key-positions = <38 38 39>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        number_1 {
+            bindings = <&kp NUMBER_1>;
             key-positions = <25 26>;
         };
 
-        negative {
-            bindings = <&kp GRAVE>;
-            key-positions = <31 32>;
+        number2 {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <26 27>;
         };
 
-        insert-org {
-            bindings = <&insertOrg>;
+        number_3 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <27 28>;
+        };
+
+        number_4 {
+            bindings = <&kp NUMBER_4>;
             key-positions = <14 15>;
         };
 
-        insert-org-find {
-            bindings = <&insertOrg>;
-            key-positions = <16 17>;
+        number_5 {
+            bindings = <&kp N5>;
+            key-positions = <14 15>;
         };
 
-        insert-link {
-            bindings = <&insertLink>;
-            key-positions = <26 27>;
+        number_6 {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <19 20>;
+        };
+
+        number_7 {
+            bindings = <&kp N7>;
+            key-positions = <31 32>;
+        };
+
+        number_8 {
+            bindings = <&kp N8>;
+            key-positions = <32 33>;
+        };
+
+        number_9 {
+            bindings = <&kp N9>;
+            key-positions = <33 34>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <43 44>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <44 45>;
         };
     };
 
