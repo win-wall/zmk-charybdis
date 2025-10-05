@@ -219,18 +219,18 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         idk {
-            bindings = <&kp SLASH>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <33 45>;
         };
 
         copy {
             bindings = <&kp LC(C)>;
-            key-positions = <37 38>;
+            key-positions = <38 39>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <38 38 39>;
+            key-positions = <39 40>;
         };
 
         number_1 {
@@ -255,7 +255,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
         number_5 {
             bindings = <&kp N5>;
-            key-positions = <14 15>;
+            key-positions = <15 16>;
         };
 
         number_6 {
