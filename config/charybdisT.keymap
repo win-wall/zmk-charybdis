@@ -292,7 +292,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         smartnum {
-            bindings = <&none>;
+            bindings = <SMART_NUM>;
             key-positions = <52 53>;
         };
 
@@ -369,7 +369,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         thumb_1 {
-            bindings = <&none>;
+            bindings = <&caps_word>;
             key-positions = <61 58>;
         };
 
@@ -379,7 +379,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
         };
 
         thumb_3 {
-            bindings = <&none>;
+            bindings = <SMART_NUM>;
             key-positions = <62 63>;
         };
 
