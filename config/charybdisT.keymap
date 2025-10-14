@@ -142,85 +142,78 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
     combos {
         compatible = "zmk,combos";
 
-        test {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <13 25>;
-            layers = <0>;
+        e_insert_link {
+            bindings = <&insertLink>;
+            key-positions = <13 14>;
         };
 
-        test2 {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <26 14>;
+        e-org-find {
+            bindings = <&insertOrgFind>;
+            key-positions = <14 15>;
         };
 
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <15 27>;
+        e-org-insert {
+            bindings = <&insertOrg>;
+            key-positions = <15 16>;
         };
 
-        Dollar_sign {
-            bindings = <&kp DOLLAR>;
-            key-positions = <16 28>;
+        e-buffer-list {
+            bindings = <&e_list_buffer>;
+            key-positions = <15 17>;
         };
 
-        percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <17 29>;
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <27 28>;
         };
 
-        carret {
-            bindings = <&kp CARET>;
-            key-positions = <25 37>;
+        shift-shift {
+            bindings = <&kp LS(LEFT_SHIFT)>;
+            key-positions = <26 27>;
         };
 
-        and {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <38 26>;
+        i-find-all {
+            bindings = <&kp LC(LS(F))>;
+            key-positions = <25 26>;
         };
 
-        star {
-            bindings = <&kp ASTERISK>;
-            key-positions = <39 27>;
+        i-m-find-all {
+            bindings = <&kp LG(LS(F))>;
+            key-positions = <25 26>;
+            layers = <1>;
         };
 
-        l_parent {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <40 28>;
+        i-setting {
+            bindings = <&kp LC(LA(S))>;
+            key-positions = <25 26 27>;
         };
 
-        r_parent {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <29 41>;
+        i-m-setting {
+            bindings = <&kp LG(COMMA)>;
+            key-positions = <25 26 27>;
+            layers = <1>;
         };
 
-        low_negative {
-            bindings = <&kp MINUS>;
-            key-positions = <19 31>;
+        c-s-t {
+            bindings = <&kp LC(LS(T))>;
+            key-positions = <26 27 28>;
         };
 
-        upper_equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <20 32>;
+        m-c-s-t {
+            bindings = <&kp LG(LS(T))>;
+            key-positions = <26 27 28>;
+            layers = <1>;
         };
 
-        why_i {
-            bindings = <&kp SLASH>;
-            key-positions = <21 33>;
+        c-a-s-s {
+            bindings = <&kp LC(LA(LS(S)))>;
+            key-positions = <25 26 27 28>;
         };
 
-        new_hash {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 43>;
-        };
-
-        end_idk {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <44 32>;
-        };
-
-        idk {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <33 45>;
+        i-m-project-structure {
+            bindings = <&kp LG(SEMICOLON)>;
+            key-positions = <25 26 27 28>;
+            layers = <1>;
         };
 
         copy {
@@ -233,69 +226,170 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
             key-positions = <39 40>;
         };
 
-        number_1 {
-            bindings = <&kp NUMBER_1>;
-            key-positions = <25 26>;
+        shift-copy {
+            bindings = <&kp LC(LS(C))>;
+            key-positions = <38 39 37>;
         };
 
-        number2 {
-            bindings = <&kp NUMBER_2>;
-            key-positions = <26 27>;
+        shift-paste {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <38 39 40>;
         };
 
-        number_3 {
-            bindings = <&kp NUMBER_3>;
-            key-positions = <27 28>;
+        enter-1 {
+            bindings = <&kp ENTER>;
+            key-positions = <50 51>;
         };
 
-        number_4 {
-            bindings = <&kp NUMBER_4>;
-            key-positions = <14 15>;
+        bang {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <13 25>;
         };
 
-        number_5 {
-            bindings = <&kp N5>;
-            key-positions = <15 16>;
+        at-sign {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <14 26>;
         };
 
-        number_6 {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <19 20>;
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <15 27>;
         };
 
-        number_7 {
-            bindings = <&kp N7>;
-            key-positions = <31 32>;
+        dollar-sign {
+            bindings = <&kp DOLLAR>;
+            key-positions = <16 28>;
         };
 
-        number_8 {
-            bindings = <&kp N8>;
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <17 29>;
+        };
+
+        caret {
+            bindings = <&kp CARET>;
+            key-positions = <25 37>;
+        };
+
+        ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <26 38>;
+        };
+
+        asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <27 39>;
+        };
+
+        left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <28 40>;
+        };
+
+        right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <29 41>;
+        };
+
+        smartnum {
+            bindings = <&none>;
+            key-positions = <52 53>;
+        };
+
+        i-projectv-view {
+            bindings = <&kp LA(NUMBER_1)>;
+            key-positions = <18 20>;
+        };
+
+        i-m-project-view {
+            bindings = <&kp LG(NUMBER_1)>;
+            key-positions = <18 20>;
+            layers = <1>;
+        };
+
+        page-up {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <20 19>;
+        };
+
+        page-down {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <20 21>;
+        };
+
+        i-create-items {
+            bindings = <&kp LA(INS)>;
+            key-positions = <21 22>;
+        };
+
+        i-m-insert-items {
+            bindings = <&kp LG(N)>;
+            key-positions = <21 22>;
+            layers = <1>;
+        };
+
+        j {
+            bindings = <&kp J>;
+            key-positions = <30 32>;
+        };
+
+        enter-2 {
+            bindings = <&kp ENTER>;
+            key-positions = <32 31>;
+        };
+
+        esc-1 {
+            bindings = <&kp ESCAPE>;
             key-positions = <32 33>;
         };
 
-        number_9 {
-            bindings = <&kp N9>;
+        del {
+            bindings = <&kp DEL>;
             key-positions = <33 34>;
         };
 
-        enter {
-            bindings = <&kp ENTER>;
+        home {
+            bindings = <&kp HOME>;
             key-positions = <43 44>;
         };
 
-        esc {
-            bindings = <&kp ESCAPE>;
+        end {
+            bindings = <&kp END>;
             key-positions = <44 45>;
         };
-    };
-    macros {
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q &kp A>;
-            label = "NEW_MACRO";
+
+        insert {
+            bindings = <&kp INSERT>;
+            key-positions = <45 46>;
         };
 
+        home-2 {
+            bindings = <&kp LC(A)>;
+            key-positions = <54 55>;
+        };
+
+        thumb_1 {
+            bindings = <&none>;
+            key-positions = <61 58>;
+        };
+
+        thumb_2 {
+            bindings = <&none>;
+            key-positions = <60 59>;
+        };
+
+        thumb_3 {
+            bindings = <&none>;
+            key-positions = <62 63>;
+        };
+
+        thumb_4 {
+            bindings = <&none>;
+            key-positions = <64 65>;
+        };
+    };
+
+    macros {
         insertOrg: insertOrg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -315,6 +409,20 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp I &kp L>;
             label = "INSERTLINK";
+        };
+
+        e_list_buffer: e_list_buffer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp B &kp I>;
+            label = "E_LIST_BUFFER";
+        };
+
+        i_find_all: i_find_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp B &kp I>;
+            label = "I_FIND_ALL";
         };
     };
 
