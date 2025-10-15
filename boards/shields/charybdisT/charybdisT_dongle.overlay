@@ -101,7 +101,7 @@
 };
 &trackball_central_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 4 500>, <&zip_xy_to_scroll_mapper>;
+    input-processors = <&zip_temp_layer 4 500>, <&zip_xy_to_scroll_mapper &zip_xy_scaler 1 15 &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
 };
 
 // Overrides for the input listener node
