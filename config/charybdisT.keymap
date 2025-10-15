@@ -299,13 +299,13 @@
         };
 
         splash {
-            bindings = <&kp SLASH>;
-            key-positions = <22 34>;
+            bindings = <&kp BSLH>;
+            key-positions = <21 33>;
         };
 
         back_slash {
-            bindings = <&kp NON_US_BACKSLASH>;
-            key-positions = <34 46>;
+            bindings = <&kp FSLH>;
+            key-positions = <33 45>;
         };
 
         idk_1 {
@@ -316,6 +316,22 @@
         idk_2 {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <44 32>;
+        };
+
+        idk_3 {
+            bindings = <&kp TILDE>;
+            key-positions = <30 42>;
+        };
+
+        m-copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+            layers = <1>;
+        };
+
+        m-paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 40>;
         };
     };
 
