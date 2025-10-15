@@ -287,6 +287,36 @@
             bindings = <&none>;
             key-positions = <64 65>;
         };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <20 32>;
+        };
+
+        negative {
+            bindings = <&kp MINUS>;
+            key-positions = <19 31>;
+        };
+
+        splash {
+            bindings = <&kp SLASH>;
+            key-positions = <22 34>;
+        };
+
+        back_slash {
+            bindings = <&kp NON_US_BACKSLASH>;
+            key-positions = <34 46>;
+        };
+
+        idk_1 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <31 43>;
+        };
+
+        idk_2 {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <44 32>;
+        };
     };
 
     macros {
