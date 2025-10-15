@@ -454,7 +454,7 @@ SMART_NUM  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp
             bindings = <
 SMART_NUM  &kp N1        &kp N2       &kp N3        &kp N4        &kp N5     &kp N6    &kp N7        &kp N8        &kp N9       &kp N0       &caps_word
 &kp ESC           &kp Q         &kp W        &kp F         &kp P         &kp B      &kp J     &kp L         &kp U         &kp Y        &kp SQT      &tog 1
-&hml DELETE BSPC           &kp A   &hml LCTRL R  &hml LALT S  &hml LCMD T  &kp G      &kp M     &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I  &hmr LGUI O  &kp ENTER
+&hml DELETE BSPC           &hml LCTRL A   &hml LCTRL R  &hml RSHFT S  &hml LCMD T  &kp G      &kp M     &hmr LCMD N  &hmr RSHFT E  &hmr LALT I  &hmr LCTRL O  &kp ENTER
 &tog 3           &kp Z         &kp X        &kp C         &kp D         &kp V      &kp K     &kp H         &kp COMMA     &kp DOT      &kp SEMI     &tog 3
 &kp LC(BSPC)    &kp BSPC  &kp UP       &kp DOWN      &kp BSPC      &kp SPACE  &kp LEFT  &kp RIGHT     &kp ENTER      &kp LC(ENTER)
 &mkp MB4        &kp ESC       &tog 3      &kp ENTER     SMART_NUM      &tog 3     &kp ESC   &mkp MB5
